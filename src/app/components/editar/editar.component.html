@@ -1,0 +1,101 @@
+<form #userForm="ngForm" (ngSubmit)="buscar()">
+    <table class="center" id="agregar">
+        <thead>
+            <tr>
+                <th class="centrar" colspan="3">Ingresa el ID del Usuario que deseas modificar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ID</td>
+                <td>
+                    <div class="form">
+                        <input type="text" name="id" placeholder="#" #nombre="ngModel" [(ngModel)]="user.id"  class="largo" required>
+                    </div>
+                </td>
+                <td>
+                    <div class="centrar" >
+                        <input type="submit" id="submit" value="Buscar" [disabled]="userForm.invalid">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+
+<form #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <table class="center" id="agregar">
+        <thead>
+            <tr>
+                <th>Dato</th>
+                <th>Campo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Código</td>
+                <td>
+                    <div class="form">
+                        <input type="text" name="codigo" placeholder="#" #codigo="ngModel" [(ngModel)]="user.data.codigo" class="largo" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Nombre</td>
+                <td>
+                    <div class="form">
+                        <input type="text" name="nombre" placeholder="Pablo Cruz Cruz" #nombre="ngModel" [(ngModel)]="user.data.nombre" class="largo" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Lugar de nacimiento</td>
+                <td>
+                    <div class="form">
+                        <input type="text" name="lugar" placeholder="CDMX" #lugar="ngModel" [(ngModel)]="user.data.lugarNac" class="largo" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Fecha de nacimiento</td>
+                <td>
+                    <div class="form">
+                        <input type="text" name="fecha" placeholder="dd/mm/aa" #fecha="ngModel" [(ngModel)]="user.data.fechaNac" class="largo" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Teléfono</td>
+                <td >
+                    <div class="form">
+                        <input type="text" name="telefono" placeholder="5512345678" #telefono="ngModel" [(ngModel)]="user.data.telefono" class="largo" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td >
+                    <div class="form">
+                        <input type="text" name="email" placeholder="contacto@minsait.mx" #email="ngModel" [(ngModel)]="user.data.email" class="largo" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Cargo</td>
+                <td >
+                    <div class="form">
+                        <input type="text" name="cargo" placeholder="Jefe" #cargo="ngModel" [(ngModel)]="user.data.cargo" class="largo" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="centrar" >
+                        <input type="submit" id="submit" value="Agregar" [disabled]="userForm.invalid">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</form>
